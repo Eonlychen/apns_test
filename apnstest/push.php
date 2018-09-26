@@ -13,6 +13,8 @@ stream_context_set_option($ctx, 'ssl', 'local_cert', 'ck.pem');//ck文件
 stream_context_set_option($ctx, 'ssl', 'passphrase', $passphrase);
 
 // Open a connection to the APNS server
+    // 沙盒地址：ssl://gateway.sandbox.push.apple.com:2195
+    // 正式地址：ssl://gateway.push.apple.com:2195
 $fp = stream_socket_client(
     'ssl://gateway.sandbox.push.apple.com:2195', $err,
     $errstr, 60, STREAM_CLIENT_CONNECT|STREAM_CLIENT_PERSISTENT, $ctx);
