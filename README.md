@@ -18,6 +18,7 @@ php push.php
 3.需要通过终端命令将cer,p12文件转换为PEM格式：
 
 openssl x509 -in apns_dev.cer -inform der -out apns_dev.pem
+
 openssl pkcs12 -nocerts -out fromkey.pem -in apns_key.p12
 
 4.将两个pem文件合成一个最终文件，苹果服务器用
